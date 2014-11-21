@@ -43,6 +43,8 @@ gem 'capistrano-rails', group: :development
 gem "haml"
 gem 'haml-rails'
 
+gem 'foundation-rails'
+
 gem 'devise'
 gem 'cancan'
 
