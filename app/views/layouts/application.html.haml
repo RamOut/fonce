@@ -1,18 +1,26 @@
 !!! 5
-%html{ :lang => "en"}
+%html{ :lang => "en", "ng-app"=>"fillonce"}
   %head
     %meta{ :charset => "utf-8" }
-
-    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
-
     %title= content_for?(:title) ? yield(:title) : "FillOnce"
-
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag  'vendor/modernizr'
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag "application"
     = csrf_meta_tag
 
   %body
+    .header
+      .midheader
+        .leftHeader
+          FillOnce
+        .middleHeader
+          Search  
+        .rightHeader
+          =image_tag "images.png", :size=>"36x36", :id=>"user_image"
+          %div{:style=> 'display: none'}
+            #user_image_popover_header Rambabu Duvvuru
+            #user_image_popover_content rambabu.d@gmail.com
 
-    = yield
-
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    .container
+      .midcontainer
+        = yield
+    = javascript_include_tag "application"

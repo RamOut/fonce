@@ -43,7 +43,11 @@ gem 'capistrano-rails', group: :development
 gem "haml"
 gem 'haml-rails'
 
-gem 'foundation-rails'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'sprockets-rails'
+
+gem 'angularjs-rails'
 
 gem 'devise'
 gem 'cancan'
@@ -55,5 +59,10 @@ gem 'pry'
 gem 'pry-remote'
 gem 'pry-stack_explorer'
 gem 'pry-debugger'
+
+gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+gem 'guard'
+gem 'guard-rspec'
+gem 'guard-livereload'
 
 

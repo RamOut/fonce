@@ -12,8 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
+//= require angular
+//= require angular-resource
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$("#user_image").popover({
+  html: true,
+  trigger: 'click',
+  placement: 'auto',
+  content: function () {
+    return $("#user_image_popover_content").html();
+  },
+  title: function () {
+    return $("#user_image_popover_header").html();
+  }
+});
+
+
