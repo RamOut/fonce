@@ -58,7 +58,6 @@ gem 'apotomo'
 gem 'pry'
 gem 'pry-remote'
 gem 'pry-stack_explorer'
-gem 'pry-debugger'
 
 gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 gem 'guard'
