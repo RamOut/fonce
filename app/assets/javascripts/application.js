@@ -12,22 +12,31 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require angular
 //= require angular-resource
-//= require bootstrap
 //= require turbolinks
+//require angular-devise/lib/devise-min.js
 //= require_tree .
+//= require angular-rails-templates
+//
+// Templates in app/assets/javascript/templates
+//= require_tree ./templates
 
-$("#user_image").popover({
-  html: true,
-  trigger: 'click',
-  placement: 'auto',
-  content: function () {
-    return $("#user_image_popover_content").html();
-  },
-  title: function () {
-    return $("#user_image_popover_header").html();
-  }
+
+$(document).ready(function(){
+  $("#user_image").popover({
+    html: true,
+    trigger: 'click',
+    placement: 'auto',
+    content: function () {
+      return $("#user_image_popover_content").html();
+    },
+    title: function () {
+      return $("#user_image_popover_header").html();
+    }
+  });
 });
+
 
 

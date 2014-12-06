@@ -1,5 +1,5 @@
 !!! 5
-%html{ :lang => "en", "ng-app"=>"fillonce"}
+%html{ :lang => "en", 'ng-app'=>"Fonce"}
   %head
     %meta{ :charset => "utf-8" }
     %title= content_for?(:title) ? yield(:title) : "FillOnce"
@@ -11,11 +11,12 @@
     .header
       .midheader
         .leftHeader
-          FillOnce
+          .fill= "Fill:"
+          .once once
+
         .middleHeader
-          Search  
         .rightHeader
-          =image_tag "images.png", :size=>"36x36", :id=>"user_image"
+          =image_tag "images.png", :size=>"35x35", :id=>"user_image"
           %div{:style=> 'display: none'}
             #user_image_popover_header Rambabu Duvvuru
             #user_image_popover_content rambabu.d@gmail.com
@@ -23,4 +24,3 @@
     .container
       .midcontainer
         = yield
-    = javascript_include_tag "application"

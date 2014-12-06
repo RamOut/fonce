@@ -1,9 +1,11 @@
 $bodyColor: #F0F0F0;
-$headercolor: #E0E0E0;
+$headercolor: #000;
+// $headercolor: #E0E0E0;
 $headerBorderColor: #DADADA;
 
 body {
   background-color: $bodyColor;
+}
   .header{
     height: 40px; 
     position:fixed;
@@ -13,6 +15,7 @@ body {
     background-color: $headercolor; 
     border-bottom: 1px solid $headerBorderColor;
     width: 100%  ;
+  }
     .midheader{
       background-color: $headercolor; 
       top: 0px;
@@ -24,7 +27,7 @@ body {
     } 
     .leftHeader, .middleHeader{
       float: left;
-      border : 1px solid green;
+      // border : 1px solid green;
     }
 
     .rightHeader{
@@ -34,7 +37,7 @@ body {
     .rightHeader, .middleHeader, .leftHeader, .midheader{
       height: 40px;
     }
-  }
+    
   .midheader, .midcontainer{
     width: 980px;
     max-width: 98%;  
@@ -46,10 +49,33 @@ body {
     margin-top: 40px;
     width: 100%  ;
   }
-  .content{
-    margin-left: -190px !important;
-  }
-}
+
+@font-face{
+      font-family: oncefont;
+      src: font-url('beta.ttf') ;
+    }
+    // @include font-face('oncefont', 'alpha.ttf', $asset-pipeline: true);
+    .fill{
+      float: left;
+      height: 40px;
+      // font-weight: bold;
+      font-size: 30px;
+      // border: 1px solid red;
+      color: #FFF;
+      // font-family: "Courier New";
+      font-family: "Times New Roman", Times, serif;
+      padding: 0 0 0 10px;
+    }
+    .once{
+      height: 34px;
+      font-size: 30px;
+      color: #337ab7;
+      // border: 1px solid red;
+      border-bottom: 1px solid #FFF;
+      font-family: oncefont;
+      float: left;
+    }
+
 .panel{
   background-color: #FFF !important;
   border-radius: 0 !important;

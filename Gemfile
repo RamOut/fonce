@@ -56,12 +56,14 @@ gem 'andand'
 gem 'apotomo'
 
 gem 'pry'
-gem 'pry-remote'
-gem 'pry-stack_explorer'
 
 gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 gem 'guard'
 gem 'guard-rspec'
 gem 'guard-livereload'
+gem 'guard-bundler'
 
+gem 'angular_rails_csrf'
+gem 'angular-rails-templates'
 
+gem 'bower-rails'

@@ -1,11 +1,11 @@
 class TemplatesController < ApplicationController
   before_action :set_template, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
+  respond_to :json
 
   def index
     @templates = Template.all
-    respond_with(@templates)
+    respond_with @templates
   end
 
   def show
